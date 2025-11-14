@@ -322,7 +322,72 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	font-weight: 700;
   margin-bottom: 30px;
 }
-
+.custom-tabs .nav-link {
+  background: none !important;
+  border: none !important;
+  color: #aaa !important;
+  font-size: 2rem;
+  font-weight: 500;
+  position: relative;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+.custom-tabs .nav-link:hover {
+  color: #fff !important;
+}
+.custom-tabs .nav-link.active {
+  color: #fff !important;
+}
+.custom-tabs .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+.stats-container {
+  width: 100%;
+  padding: 20px 0;
+  margin: 20px 0;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  text-align: left;
+}
+.stat-item {
+  position: relative;
+  padding: 0;
+}
+.stat-number {
+  font-size: 56px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+.stat-label {
+  font-size: 16px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .stat-number {
+    font-size: 44px;
+  }
+  .stat-label {
+    font-size: 14px;
+  }
+}
 
 
 

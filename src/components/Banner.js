@@ -13,7 +13,11 @@ export const Banner = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = ["FullStack Developer", "Software Developer", "Mobile Developer"];
+  const toRotate = [
+    "FullStack Developer",
+    "Software Developer",
+    "Mobile Developer",
+  ];
   const period = 2000;
 
   useEffect(() => {
@@ -66,9 +70,7 @@ export const Banner = () => {
                   }
                 >
                   <span className="tagline">.</span>
-                  <h1 className="mb-3">
-                    {`Hi! I'm Manni`}
-                  </h1>
+                  <h1 className="mb-3">{`Hi! I'm Manni`}</h1>
                   <h1>
                     <span
                       className="txt-rotate"
@@ -79,14 +81,19 @@ export const Banner = () => {
                     </span>
                   </h1>
                   <p>
-                    Full Stack Software Developer with 3+ years of experience in
+                    Full Stack Software Developer with 4+ years of experience in
                     website and mobile app development.{" "}
                   </p>
-                  <p>Experience in using C#, ASP.NET Core, Python, React, TypeScript, 
-                    React Native, AWS, GitHub Actions and Docker</p>
-                  <p>Collaborative, Communicative, Reliable, Detail-oriented, Self-motivated</p>
+                  <p>
+                    Experience in using C#, ASP.NET Core, Python, React,
+                    TypeScript, React Native, AWS, GitHub Actions and Docker
+                  </p>
+                  <p>
+                    Collaborative, Communicative, Reliable, Detail-oriented,
+                    Self-motivated
+                  </p>
                   <a
-                    href="/resume.pdf"
+                    href={`${process.env.PUBLIC_URL}/CV-Manni-Full Stack Developer.pdf`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

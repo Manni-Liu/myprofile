@@ -1,3 +1,4 @@
+// AboutSection.js
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import "animate.css";
@@ -6,38 +7,6 @@ import TrackVisibility from "react-on-screen";
 export const AboutSection = () => {
   return (
     <section className="about" id="about">
-      <style>{`
-        .custom-tabs .nav-link {
-          background: none !important;
-          border: none !important;
-          color: #aaa !important;
-          font-size: 2rem;
-          font-weight: 500;
-          position: relative;
-          padding: 8px 16px;
-          transition: all 0.3s ease;
-        }
-
-        .custom-tabs .nav-link:hover {
-          color: #fff !important;
-        }
-
-        .custom-tabs .nav-link.active {
-          color: #fff !important;
-        }
-
-        .custom-tabs .nav-link.active::after {
-          content: "";
-          position: absolute;
-          bottom: -2px;
-          left: 0;
-          width: 100%;
-          height: 2px;
-          background-color: #fff;
-          transition: width 0.3s ease;
-        }
-      `}</style>
-
       <Container>
         <Row className="align-items-center">
           <Col size={12} md={6}>
@@ -63,21 +32,30 @@ export const AboutSection = () => {
                 >
                   <h2>About Me</h2>
                   <p>
-                    I am a passionate software developer with experience in
+                    I am a passionate Software Developer with experience in
                     building web and mobile applications. I enjoy creating
                     user-friendly interfaces and solving complex problems
                     through code. In my free time, I like to explore new
                     technologies and improve my skills.
                   </p>
-                  <p>
-                    Feel free to reach out to me for any collaboration or
-                    project opportunities. I am always open to new challenges
-                    and learning experiences.
-                  </p>
-                  <p>Thank you for visiting my portfolio!</p>
+                  <div className="stats-container">
+                    <div className="stats-grid">
+                      <div className="stat-item">
+                        <div className="stat-number">4+</div>
+                        <div className="stat-label">Years of Experience</div>
+                      </div>
+                      <div className="stat-item">
+                        <div className="stat-number">5+</div>
+                        <div className="stat-label">Certifications Received</div>
+                      </div>
+                      <div className="stat-item">
+                        <div className="stat-number">10+</div>
+                        <div className="stat-label">Projects Completed</div>
+                      </div>
+                    </div>
+                  </div>
 
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                    {/* ✅ 使用自定义的下划线Tab样式 */}
                     <Nav
                       variant="pills"
                       className="custom-tabs mb-5 justify-content-left align-items-left"
