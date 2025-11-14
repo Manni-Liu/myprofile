@@ -16,7 +16,7 @@ export const Footer = () => {
               <a href="#"><img src={navIcon2} alt="Icon" /></a>
               <a href="#"><img src={navIcon3} alt="Icon" /></a>
             </div>
-            <p>© 2025 Manni. All rights reserved.</p>
+            <p>© 2025 Manni Liu. All rights reserved.</p>
           </Col>
         </Row>
       </Container>
