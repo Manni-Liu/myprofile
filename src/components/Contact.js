@@ -46,21 +46,24 @@ export const Contact = () => {
       setFormDetails(formInitialDetails);
 
       if (response.ok) {
-        setStatus({ success: true, message: "Message sent successfully!" });
-        setTimeout(() => setStatus({}), 2000)
-      } else {
-        setStatus({
-          success: false,
-          message: "Something went wrong. Try again later."
-        });
-        setTimeout(() => setStatus({}), 5000)
-      }
+    setStatus({ success: true, message: "Message sent successfully!" });
+    setTimeout(() => {
+      setStatus({ success: null, message: "" });
+    }, 2000);
+} else {
+    setStatus({ success: false, message: "Something went wrong. Try again later." });
+    setTimeout(() => {
+      setStatus({ success: null, message: "" });
+    }, 3000);
+}
     } catch (error) {
       setStatus({
         success: false,
         message: "Network error. Please try again later."
       });
-      setTimeout(() => setStatus({}), 5000)
+      setTimeout(() => {
+        setStatus({ success: null, message: "" });
+      }, 3000);
     }
   };
 

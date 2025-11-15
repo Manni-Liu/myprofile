@@ -11,7 +11,6 @@ export const SkillsShowcase = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // ✅ 技能数据（不需要写 angle）
   const skills = {
     innerCircle: [
       { name: 'C#', color: '#68217A', icon: 'C#' },
@@ -64,8 +63,7 @@ export const SkillsShowcase = () => {
     <section className="skill" id="skills">
       <div className="container">
         <div className="row">
-          <div className="col-12">
-            <div className="skill-bx">
+          <div className="col-12" text-center>
               <h2>Skills</h2>
               <p>My comprehensive technology stack and expertise across the full development lifecycle</p>
               <div className="relative w-full max-w-4xl mx-auto" style={{ aspectRatio: '1/1' }}>
@@ -77,15 +75,15 @@ export const SkillsShowcase = () => {
                     </radialGradient>
                   </defs>
 
-                  {/* 背景光晕 */}
+                  {/* Background halo */}
                   <circle cx="400" cy="400" r="350" fill="url(#centerGlow)" />
 
-                  {/* 同心圆轨道 */}
+                  {/* concentric orbits */}
                   <circle cx="400" cy="400" r="150" fill="none" stroke="rgba(170, 54, 124, 0.3)" strokeWidth="1.5" opacity="0.6" />
                   <circle cx="400" cy="400" r="240" fill="none" stroke="rgba(170, 54, 124, 0.3)" strokeWidth="1.5" opacity="0.6" />
                   <circle cx="400" cy="400" r="330" fill="none" stroke="rgba(170, 54, 124, 0.3)" strokeWidth="1.5" opacity="0.6" />
 
-                  {/* 径向线 */}
+                  {/* radial lines */}
                   {[0, 45, 90, 135, 180, 225, 270, 315].map(angle => {
                     const outer = getPosition(angle, 350);
                     return (
@@ -102,7 +100,7 @@ export const SkillsShowcase = () => {
                     );
                   })}
 
-                  {/* 中心区域 */}
+                  {/* Center area */}
                   <circle cx="400" cy="400" r="90" fill="#151515" opacity="0.95" stroke="#AA367C" strokeWidth="2" />
                   <text x="400" y="390" textAnchor="middle" fill="#ffffff" fontSize="24" fontWeight="bold">
                     Full Stack
@@ -111,7 +109,7 @@ export const SkillsShowcase = () => {
                     Developer
                   </text>
 
-                  {/* ✅ 内圈技能（自动分布） */}
+                  {/* Inner circle skills (auto-distributed) */}
                   {skills.innerCircle.map((skill, idx) => {
                     const total = skills.innerCircle.length;
                     const angle = (360 / total) * idx + rotation * 0.5;
@@ -160,7 +158,7 @@ export const SkillsShowcase = () => {
                     );
                   })}
 
-                  {/* ✅ 中圈技能（自动分布） */}
+                  {/* Middle circle skills (auto-distributed) */}
                   {skills.middleCircle.map((skill, idx) => {
                     const total = skills.middleCircle.length;
                     const angle = (360 / total) * idx + rotation * 0.3;
@@ -199,7 +197,7 @@ export const SkillsShowcase = () => {
                     );
                   })}
 
-                  {/* ✅ 外圈技能（自动分布） */}
+                  {/* Outer circle skills */}
                   {skills.outerCircle.map((skill, idx) => {
                     const total = skills.outerCircle.length;
                     const angle = (360 / total) * idx + rotation * 0.15;
@@ -239,7 +237,6 @@ export const SkillsShowcase = () => {
                   })}
                 </svg>
               </div>
-            </div>
           </div>
         </div>
       </div>
