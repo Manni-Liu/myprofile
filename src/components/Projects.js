@@ -26,9 +26,11 @@ export const Projects = () => {
       githubUrl: "https://github.com/Manni-Liu/Lincode"
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "InteractiveChristmas Tree",
+      description: "React, Vite, Three.js, R3F, Tailwind CSS ",
       imgUrl: projImg3,
+      videoUrl:"../assets/img/Christmas-Tree.mp4",
+      githubUrl:"https://github.com/Manni-Liu/Christmas-Tree.git"
     },
     {
       title: "Business Startup",
